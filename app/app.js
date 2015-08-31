@@ -13,8 +13,11 @@ export default class App extends React.Component {
     return (
       <div>
         <h3>{this.state.text}</h3>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <ol>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ol>
         <RouteHandler />
       </div>
     )

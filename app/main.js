@@ -2,6 +2,7 @@ import React from 'react';
 import Router from 'react-router';
 import App from './app';
 import About from './Components/About';
+import AboutCompany from './Components/AboutCompany';
 import Contact from './Components/Contact';
 
 const Route        = Router.Route,
@@ -9,7 +10,9 @@ const Route        = Router.Route,
 
 const routes = (
   <Route handler={App} path="/">
-    <Route path="about" handler={About}/>
+    <Route path="about" handler={About}>
+      <Route path="company" handler={AboutCompany}/>
+    </Route>
     <Route path="contact" handler={Contact}/>
   </Route> 
 );
