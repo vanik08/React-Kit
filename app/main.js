@@ -1,15 +1,16 @@
 import React from 'react';
 import Router from 'react-router';
-import Comp2 from './Components/Comp2';
-import Comp3 from './Components/Comp3';
+import App from './app';
+import About from './Components/About';
+import Contact from './Components/Contact';
 
 const Route        = Router.Route,
       DefaultRoute = Router.DefaultRoute;
 
 const routes = (
-  <Route handler={Comp2} path="/">
-    <Route path="about" handler={Comp3}/>
-    <Route path="inbox" handler={Comp2}/>
+  <Route handler={App} path="/">
+    <Route path="about" handler={About}/>
+    <Route path="contact" handler={Contact}/>
   </Route> 
 );
 

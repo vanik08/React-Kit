@@ -1,11 +1,12 @@
 import React from 'react';
+import '../styles/contact';
 
-export default class Comp3 extends React.Component {
+export default class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.handle = this.handle.bind(this);
     this.state = {
-      text: 'Comp 3'
+      text: 'Contact Page'
     }
   }
   handle(e) {
@@ -16,7 +17,7 @@ export default class Comp3 extends React.Component {
 	render() {
 		return (
       <div>
-        <input type="text" placeholder="Comp3" onChange={this.handle}/>
+        <input type="text" placeholder="Contact" onChange={this.handle}/>
         <h3>{this.state.text}</h3>
       </div>
     )
