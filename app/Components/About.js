@@ -15,8 +15,8 @@ export default class About extends React.Component {
       text: e.target.value
     });
   }
-	render() {
-		return (
+  render() {
+    return (
       <div>
         <input type="text" placeholder="About" onChange={this.handle}/>
         <h3>{this.state.text}</h3>
@@ -26,5 +26,5 @@ export default class About extends React.Component {
         <RouteHandler />
       </div>
     )
-	}
+  }
 }
