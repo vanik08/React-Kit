@@ -11,10 +11,14 @@ module.exports = {
       { test: /\.js$/, 
         loader: 'babel-loader',
         exclude: /node_modules/ 
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.json', '.coffee'] 
+    extensions: ['', '.js', '.json', '.scss'] 
   }
 };

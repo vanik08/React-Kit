@@ -3,14 +3,14 @@ import Router from 'react-router';
 import Comp2 from './Components/Comp2';
 import Comp3 from './Components/Comp3';
 
-var Route = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
+const Route        = Router.Route,
+      DefaultRoute = Router.DefaultRoute;
 
-var routes = (
+const routes = (
   <Route handler={Comp2} path="/">
     <Route path="about" handler={Comp3}/>
     <Route path="inbox" handler={Comp2}/>
-  </Route>
+  </Route> 
 );
 
 Router.run(routes, function (Handler) {

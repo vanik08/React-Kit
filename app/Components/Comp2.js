@@ -1,5 +1,6 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
+import '../Styles/main';
 
 export default class Comp2 extends React.Component {
   constructor(props) {
