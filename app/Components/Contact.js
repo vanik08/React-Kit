@@ -14,12 +14,12 @@ export default class Contact extends React.Component {
       text: e.target.value
     });
   }
-	render() {
-		return (
+  render() {
+    return (
       <div>
         <input type="text" placeholder="Contact" onChange={this.handle}/>
         <h3>{this.state.text}</h3>
       </div>
     )
-	}
+  }
 }
