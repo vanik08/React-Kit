@@ -1,12 +1,11 @@
 import React from 'react';
-import {RouteHandler} from 'react-router';
 
-export default class Comp2 extends React.Component {
+export default class Comp3 extends React.Component {
   constructor(props) {
     super(props);
     this.handle = this.handle.bind(this);
     this.state = {
-      text: 'Comp2'
+      text: 'Comp 3'
     }
   }
   handle(e) {
@@ -17,9 +16,8 @@ export default class Comp2 extends React.Component {
 	render() {
 		return (
       <div>
-        <input type="text" placeholder="Comp2" onChange={this.handle}/>
+        <input type="text" placeholder="Comp3" onChange={this.handle}/>
         <h3>{this.state.text}</h3>
-        <RouteHandler />
       </div>
     )
 	}

@@ -4,9 +4,9 @@
   "description": "React Bundler",
   "main": "index.js",
   "scripts": {
-     "test"   : "echo \"Error: no test specified\" && exit 1",
-     "build"  : "webpack -p --progress --colors",
-     "start"  : "webpack-dev-server --hot --port 9000 --progress --colors"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p --progress --colors",
+    "start": "webpack-dev-server --hot --port 9000 --progress --colors"
   },
   "author": "Vanik Gevorgyan",
   "license": "ISC",

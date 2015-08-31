@@ -1,10 +1,19 @@
 import React from 'react';
-import {Comp2} from './Components/Comp2';
+import Router from 'react-router';
+import Comp2 from './Components/Comp2';
+import Comp3 from './Components/Comp3';
 
-export class Comp extends React.Component {
-	render() {
-		return <h1>Hello charlie!</h1>
-	}
-}
+var Route = Router.Route;
+var DefaultRoute = Router.DefaultRoute;
 
-React.render(<Comp2 />, document.getElementById('content'));
+var routes = (
+  <Route handler={Comp2} path="/">
+    <Route path="about" handler={Comp3}/>
+    <Route path="inbox" handler={Comp2}/>
+  </Route>
+);
+
+Router.run(routes, function (Handler) {
+  React.render(<Handler/>, document.body);
+});
+
