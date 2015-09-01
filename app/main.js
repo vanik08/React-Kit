@@ -1,11 +1,16 @@
+//Utills
 import React from 'react';
 import Router from 'react-router';
 import Alt from './alt';
+import _ from 'lodash';
+import $ from 'jquery';
+//Project Specific
 import App from './app';
 import About from './Components/About';
 import AboutCompany from './Components/AboutCompany';
 import Contact from './Components/Contact';
-import _ from 'lodash';
+
+console.log($('div'));
 
 const Route        = Router.Route,
       DefaultRoute = Router.DefaultRoute;
