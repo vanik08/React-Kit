@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, RouteHandler} from 'react-router';
+import {Button} from 'react-bootstrap';
 import '../styles/about';
 
 export default class About extends React.Component {
@@ -24,6 +25,7 @@ export default class About extends React.Component {
           <li><Link to="/about/company">Company</Link></li>
         </ul>
         <button className={'btn btn-default'}>Click!</button>
+        <Button>Hello!</Button>
         <RouteHandler />
       </div>
     )

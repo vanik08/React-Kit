@@ -10,8 +10,6 @@ import About from './Components/About';
 import AboutCompany from './Components/AboutCompany';
 import Contact from './Components/Contact';
 
-console.log($('div'));
-
 const Route        = Router.Route,
       DefaultRoute = Router.DefaultRoute;
 
