@@ -5,6 +5,7 @@ import App from './app';
 import About from './Components/About';
 import AboutCompany from './Components/AboutCompany';
 import Contact from './Components/Contact';
+import _ from 'lodash';
 
 const Route        = Router.Route,
       DefaultRoute = Router.DefaultRoute;
