@@ -1,24 +1,24 @@
 import React from 'react';
 import {RouteHandler, Link} from 'react-router';
+import {Nav, Navbar, NavItem} from 'react-bootstrap';
+import MyNavbar from './Components/MyNavbar';
 import './styles/app'
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: 'App'
+      text: 'Welcome to the homepage, hope you\'re having a wonderful day!'
     }
   }
   render() {
     return (
       <div>
-        <h3>{this.state.text}</h3>
-        <ol>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ol>
-        <RouteHandler />
+        <MyNavbar />
+        <div className='container-fluid'>
+          <h5>{this.state.text}</h5>
+          <RouteHandler />
+        </div>
       </div>
     )
   }

@@ -24,8 +24,7 @@ export default class About extends React.Component {
         <ul>
           <li><Link to="/about/company">Company</Link></li>
         </ul>
-        <button className={'btn btn-default'}>Click!</button>
-        <Button>Hello!</Button>
+        <Button bsStyle='success'>Click!</Button>
         <RouteHandler />
       </div>
     )
