@@ -1,5 +1,6 @@
 import React from 'react';
 import Router from 'react-router';
+import Alt from './alt';
 import App from './app';
 import About from './Components/About';
 import AboutCompany from './Components/AboutCompany';
