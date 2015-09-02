@@ -2,7 +2,7 @@
 Starter kit for React.
 
 ### React Bootstrap all inclusive toolset.
-#### Includes: ReactJS, React-Bootstrap, react-router, WebPack, ES6 (Babel), Bootstrap 3, Sass, jQuery and Lodash
+#### Includes: ReactJS <br /> React-Bootstrap <br /> react-router <br /> WebPack <br /> ES6 (Babel) <br /> Bootstrap 3 <br /> Sass <br /> jQuery and Lodash
 ##### Todo: Implement Flux with [AltJS](http://alt.js.org)
 
 `git clone https://github.com/vanik08/React-Kit.git` <br />
