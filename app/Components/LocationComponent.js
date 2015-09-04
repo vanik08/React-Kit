@@ -34,9 +34,9 @@ export default class LocationComponent extends React.Component {
   render() {
     return (
       <Row fluid>
-        <Col md={2}>
+        <Col md={6} sm={12} xs={12}>
           <form>
-            <Input onChange={this.handleInput} type="text" placeholder="Enter Location Name"/>
+            <Input inline onChange={this.handleInput} type="text" placeholder="Enter Location Name"/>
             <Button onClick={this.handleClick}>Add Location</Button>
             <ul>
               {this.state.locations.map((location, i) => {
