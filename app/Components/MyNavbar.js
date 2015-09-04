@@ -9,8 +9,8 @@ export default class MyNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar brand='React' fluid>
-          <Nav>
+        <Navbar brand='React' toggleNavKey={0}>
+          <Nav right eventKey={0}>
             <NavItem eventKey={1} href='#/'>Home</NavItem>
             <NavItem eventKey={2} href='#/about'>About</NavItem>
             <NavItem eventKey={3} href='#/contact'>Contact</NavItem>
