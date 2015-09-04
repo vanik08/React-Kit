@@ -4,6 +4,7 @@ Starter kit for React.
 ### React Bootstrap all inclusive toolset.
 ##### Includes <br /> 
 ReactJS <br /> 
+Flux using [AltJS](http://alt.js.org)
 React-Bootstrap <br /> 
 react-router <br /> 
 WebPack <br /> 
