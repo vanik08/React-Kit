@@ -8,8 +8,8 @@
     "build": "webpack -p --progress --colors",
     "start": "webpack-dev-server --hot --port 9000 --progress --colors"
   },
-  "author": "Vanik Gevorgyan",
-  "license": "ISC",
+  "author": "Vanik Gevorgyan, Armorway Inc.",
+  "license": "MIT",
   "dependencies": {
     "alt": "^0.17.1",
     "babel-core": "^5.8.23",

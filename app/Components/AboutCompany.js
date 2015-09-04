@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact2 from './Contact2'
 import '../styles/about';
 
 export default class AboutCompany extends React.Component {
@@ -19,6 +20,7 @@ export default class AboutCompany extends React.Component {
       <div>
         <input type="text" placeholder="About Company" onChange={this.handle}/>
         <h3>{this.state.text}</h3>
+        <Contact2 />
       </div>
     )
   }

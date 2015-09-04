@@ -1,13 +1,11 @@
 import React from 'react';
-import {RouteHandler, Link} from 'react-router';
-import Contact2 from './Contact2'
 import LocationStore from '../stores/exampleStore';
 import LocationActions from '../actions/exampleActions';
 import '../styles/contact';
 
 let inputValue;
 
-export default class Contact extends React.Component {
+export default class Contact2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = LocationStore.getState();
@@ -44,8 +42,6 @@ export default class Contact extends React.Component {
             );
           })}
         </ul>
-        <Link to="/contact/2">Contact Page #2</Link>
-        <RouteHandler />
       </div>
     );
   }

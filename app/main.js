@@ -9,6 +9,7 @@ import App from './app';
 import About from './Components/About';
 import AboutCompany from './Components/AboutCompany';
 import Contact from './Components/Contact';
+import Contact2 from './Components/Contact2';
 
 const Route        = Router.Route,
       DefaultRoute = Router.DefaultRoute;
@@ -18,7 +19,9 @@ const routes = (
     <Route path="about" handler={About}>
       <Route path="company" handler={AboutCompany}/>
     </Route>
-    <Route path="contact" handler={Contact}/>
+    <Route path="contact" handler={Contact}>
+      <Route path="2" handler={Contact2}/>
+    </Route>
   </Route> 
 );
 
