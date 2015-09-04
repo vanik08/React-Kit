@@ -1,6 +1,6 @@
 import React from 'react';
 import {RouteHandler, Link} from 'react-router';
-import Contact2 from './Contact2'
+import LocationComponent from './LocationComponent'
 import LocationStore from '../stores/exampleStore';
 import LocationActions from '../actions/exampleActions';
 import '../styles/contact';
@@ -35,15 +35,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-        <input onChange={this.handleInput} type="text" placeholder="Enter Location Name"/>
-        <button onClick={this.handleClick}>Add Location</button>
-        <ul>
-          {this.state.locations.map((location, i) => {
-            return (
-              <li key={i}>{location.name}</li>
-            );
-          })}
-        </ul>
+        <h3>Welcome to the magical Contact Page!</h3>
         <Link to="/contact/2">Contact Page #2</Link>
         <RouteHandler />
       </div>

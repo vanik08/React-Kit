@@ -1,11 +1,12 @@
 import React from 'react';
+import {Row, Col, Button, Input} from 'react-bootstrap';
 import LocationStore from '../stores/exampleStore';
 import LocationActions from '../actions/exampleActions';
 import '../styles/contact';
 
 let inputValue;
 
-export default class Contact2 extends React.Component {
+export default class LocationComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = LocationStore.getState();
@@ -32,17 +33,21 @@ export default class Contact2 extends React.Component {
   }
   render() {
     return (
-      <div>
-        <input onChange={this.handleInput} type="text" placeholder="Enter Location Name"/>
-        <button onClick={this.handleClick}>Add Location</button>
-        <ul>
-          {this.state.locations.map((location, i) => {
-            return (
-              <li key={i}>{location.name}</li>
-            );
-          })}
-        </ul>
-      </div>
+      <Row fluid>
+        <Col md={2}>
+          <form>
+            <Input onChange={this.handleInput} type="text" placeholder="Enter Location Name"/>
+            <Button onClick={this.handleClick}>Add Location</Button>
+            <ul>
+              {this.state.locations.map((location, i) => {
+                return (
+                  <li key={i}>{location.name}</li>
+                );
+              })}
+            </ul>
+          </form>
+        </Col>
+      </Row>
     );
   }
 }

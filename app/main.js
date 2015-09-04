@@ -9,7 +9,7 @@ import App from './app';
 import About from './Components/About';
 import AboutCompany from './Components/AboutCompany';
 import Contact from './Components/Contact';
-import Contact2 from './Components/Contact2';
+import LocationComponent from './Components/LocationComponent';
 
 const Route        = Router.Route,
       DefaultRoute = Router.DefaultRoute;
@@ -20,7 +20,7 @@ const routes = (
       <Route path="company" handler={AboutCompany}/>
     </Route>
     <Route path="contact" handler={Contact}>
-      <Route path="2" handler={Contact2}/>
+      <Route path="2" handler={LocationComponent}/>
     </Route>
   </Route> 
 );
