@@ -11,14 +11,18 @@ WebPack <br />
 ES6 (Babel) <br /> 
 Bootstrap 3 <br /> 
 Sass <br /> 
-jQuery and Lodash
+jQuery and Lodash <br />
+Jest (unit testing)
 
 `git clone https://github.com/vanik08/React-Kit.git` <br />
 
 `npm install` <br />
 
+`npm test` to start Jest unit-tests. <br />
 `npm start` to start Dev-Server with Hot reloading. <br />
 `npm run build` To build for production <br />
+
+
 
 
 
