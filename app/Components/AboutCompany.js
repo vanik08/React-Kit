@@ -2,7 +2,7 @@ import React from 'react';
 import LocationComponent from './LocationComponent'
 import '../styles/about';
 
-export default class AboutCompany extends React.Component {
+class AboutCompany extends React.Component {
   constructor(props) {
     super(props);
     this.handle = this.handle.bind(this);
@@ -25,3 +25,5 @@ export default class AboutCompany extends React.Component {
     )
   }
 }
+
+export default AboutCompany;

@@ -6,7 +6,7 @@ import '../styles/contact';
 
 let inputValue;
 
-export default class LocationComponent extends React.Component {
+class LocationComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = LocationStore.getState();
@@ -51,3 +51,5 @@ export default class LocationComponent extends React.Component {
     );
   }
 }
+
+export default LocationComponent;

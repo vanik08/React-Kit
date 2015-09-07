@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 import '../styles/about';
 
 
-export default class About extends React.Component {
+class About extends React.Component {
   constructor(props) {
     super(props);
     this.handle = this.handle.bind(this);
@@ -45,3 +45,5 @@ export default class About extends React.Component {
     )
   }
 }
+
+export default About;

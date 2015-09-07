@@ -1,7 +1,7 @@
 import React from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
 
-export default class MyNavbar extends React.Component {
+class MyNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.handleExpand = this.handleExpand.bind(this);
@@ -27,3 +27,5 @@ export default class MyNavbar extends React.Component {
     )
   }
 }
+
+export default MyNavbar;

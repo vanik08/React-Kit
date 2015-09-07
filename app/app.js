@@ -4,7 +4,7 @@ import {Nav, Navbar, NavItem} from 'react-bootstrap';
 import MyNavbar from './Components/MyNavbar';
 import './styles/app'
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,3 +23,5 @@ export default class App extends React.Component {
     )
   }
 }
+
+export default App;
