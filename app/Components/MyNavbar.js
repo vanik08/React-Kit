@@ -15,7 +15,8 @@ export default class MyNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar onClick={this.handleExpand} brand='React' fluid toggleNavKey={0} navExpanded={this.state.expand} onToggle={this.handleExpand}>
+        <Navbar brand='React' fluid toggleNavKey={0} navExpanded={this.state.expand} 
+                onClick={this.handleExpand}>
           <Nav eventKey={0}>
             <NavItem  eventKey={1} href='#/'>Home</NavItem>
             <NavItem  eventKey={2} href='#/about'>About</NavItem>
