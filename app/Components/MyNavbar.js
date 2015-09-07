@@ -7,17 +7,19 @@ export default class MyNavbar extends React.Component {
     this.handleExpand = this.handleExpand.bind(this);
     this.state = {expand: false}
   }
-  handleExpand(e) {
-    this.setState({expand: !this.state.expand});
+  handleExpand(e) { 
+    if(window.innerWidth < 768) {
+      this.setState({expand: !this.state.expand});
+    }
   }
   render() {
     return (
       <div>
-        <Navbar brand='React' fluid toggleNavKey={0} navExpanded={this.state.expand} onToggle={this.handleExpand}>
+        <Navbar onClick={this.handleExpand} brand='React' fluid toggleNavKey={0} navExpanded={this.state.expand} onToggle={this.handleExpand}>
           <Nav eventKey={0}>
-            <NavItem onClick={this.handleExpand} eventKey={1} href='#/'>Home</NavItem>
-            <NavItem onClick={this.handleExpand} eventKey={2} href='#/about'>About</NavItem>
-            <NavItem onClick={this.handleExpand} eventKey={3} href='#/contact'>Contact</NavItem>
+            <NavItem  eventKey={1} href='#/'>Home</NavItem>
+            <NavItem  eventKey={2} href='#/about'>About</NavItem>
+            <NavItem  eventKey={3} href='#/contact'>Contact</NavItem>
           </Nav>
         </Navbar>
       </div>
