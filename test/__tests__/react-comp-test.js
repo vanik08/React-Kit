@@ -1,8 +1,8 @@
-jest.dontMock('../app/Components/CheckboxWithLabel.js');
+jest.dontMock('../../app/Components/CheckboxWithLabel.js');
 describe('CheckboxWithLabel', function() {
   it('changes the text after click', function() {
     var React = require('react/addons');
-    var CheckboxWithLabel = require('../app/Components/CheckboxWithLabel.js');
+    var CheckboxWithLabel = require('../../app/Components/CheckboxWithLabel.js');
     var TestUtils = React.addons.TestUtils;
 
     // Render a checkbox with label in the document

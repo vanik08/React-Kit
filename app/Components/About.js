@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, RouteHandler} from 'react-router';
 import {Button} from 'react-bootstrap';
-import '../styles/about';
+import '../styles/about.scss';
 
 
 class About extends React.Component {
