@@ -1,24 +1,24 @@
-// CheckboxWithLabel.js
+jest.dontMock('../app/Components/CheckboxWithLabel.js');
+describe('CheckboxWithLabel', function() {
+  it('changes the text after click', function() {
+    var React = require('react/addons');
+    var CheckboxWithLabel = require('../app/Components/CheckboxWithLabel.js');
+    var TestUtils = React.addons.TestUtils;
 
-var React = require('react/addons');
-var CheckboxWithLabel = React.createClass({
-  getInitialState: function() {
-    return { isChecked: false };
-  },
-  onChange: function() {
-    this.setState({isChecked: !this.state.isChecked});
-  },
-  render: function() {
-    return (
-      <label>
-        <input
-          type="checkbox"
-          checked={this.state.isChecked}
-          onChange={this.onChange}
-        />
-        {this.state.isChecked ? this.props.labelOn : this.props.labelOff}
-      </label>
+    // Render a checkbox with label in the document
+    var checkbox = TestUtils.renderIntoDocument(
+      <CheckboxWithLabel labelOn="On" labelOff="Off" />
     );
-  }
+
+    // Verify that it's Off by default
+    var label = TestUtils.findRenderedDOMComponentWithTag(
+      checkbox, 'label');
+    expect(React.findDOMNode(label).textContent).toEqual('Off');
+
+    // Simulate a click and verify that it is now On
+    var input = TestUtils.findRenderedDOMComponentWithTag(
+      checkbox, 'input');
+    TestUtils.Simulate.change(input);
+    expect(React.findDOMNode(label).textContent).toEqual('On');
+  });
 });
-module.exports = CheckboxWithLabel;
