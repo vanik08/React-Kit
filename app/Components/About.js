@@ -31,7 +31,7 @@ class About extends React.Component {
         <ul>
           <li><Link to="/about/company">Company</Link></li>
         </ul>
-        <Button bsStyle='success' onClick={this.handleClick}>Click!</Button>
+        <Button ref="button" bsStyle='success' onClick={this.handleClick}>Click!</Button>
         <RouteHandler />
         <li>{5+5}</li>
         <p>
