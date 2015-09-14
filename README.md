@@ -10,6 +10,7 @@ react-router <br />
 WebPack <br /> 
 ES6 (Babel) <br /> 
 Bootstrap 3 <br /> 
+Font Awesome <br />
 Sass <br /> 
 jQuery and Lodash <br />
 Jest (unit testing)
