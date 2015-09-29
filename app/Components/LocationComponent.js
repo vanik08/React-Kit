@@ -12,7 +12,6 @@ class LocationComponent extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.onChange = this.onChange.bind(this);
-    console.log(this.state);
   }
   componentDidMount() {
     LocationStore.listen(this.onChange);

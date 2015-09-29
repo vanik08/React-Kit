@@ -13,7 +13,7 @@ class About extends React.Component {
       text: 'About Page',
       show: false,
       list: [1, 2, 3]
-    }
+    };
   }
   handle(e) {
     this.setState({
@@ -42,7 +42,7 @@ class About extends React.Component {
         })()}
         </p>
       </div>
-    )
+    );
   }
 }
 
