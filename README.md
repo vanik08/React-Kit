@@ -5,6 +5,7 @@ Starter kit for React.
 ##### Includes <br /> 
 ReactJS <br /> 
 Flux using [AltJS](http://alt.js.org) <br /> 
+ImmutableJS <br />
 React-Bootstrap <br /> 
 react-router <br /> 
 WebPack <br /> 
@@ -13,6 +14,7 @@ Bootstrap 3 <br />
 Font Awesome <br />
 Sass <br /> 
 jQuery and Lodash <br />
+ESLint <br />
 Jest (unit testing)
 
 `git clone https://github.com/vanik08/React-Kit.git` <br />
