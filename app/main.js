@@ -4,6 +4,7 @@ import Router from 'react-router';
 import Alt from './alt';
 import _ from 'lodash';
 import $ from 'jquery';
+
 //Project Specific
 import App from './app';
 import About from './Components/About';
@@ -22,10 +23,9 @@ const routes = (
     <Route path="contact" handler={Contact}>
       <Route path="2" handler={LocationComponent}/>
     </Route>
-  </Route> 
+  </Route>
 );
 
 Router.run(routes, function (Handler) {
   React.render(<Handler/>, document.body);
 });
-

@@ -1,6 +1,6 @@
 import React from 'react';
 import {RouteHandler, Link} from 'react-router';
-import LocationComponent from './LocationComponent'
+import LocationComponent from './LocationComponent';
 import LocationStore from '../stores/exampleStore';
 import LocationActions from '../actions/exampleActions';
 import '../styles/contact';
@@ -14,7 +14,6 @@ class Contact extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.onChange = this.onChange.bind(this);
-    console.log(this.state);
   }
   componentDidMount() {
     LocationStore.listen(this.onChange);

@@ -1,5 +1,5 @@
 import React from 'react';
-import LocationComponent from './LocationComponent'
+import LocationComponent from './LocationComponent';
 import '../styles/about';
 
 class AboutCompany extends React.Component {
@@ -8,7 +8,7 @@ class AboutCompany extends React.Component {
     this.handle = this.handle.bind(this);
     this.state = {
       text: 'About Company Page'
-    }
+    };
   }
   handle(e) {
     this.setState({
@@ -22,7 +22,7 @@ class AboutCompany extends React.Component {
         <h3>{this.state.text}</h3>
         <LocationComponent />
       </div>
-    )
+    );
   }
 }
 

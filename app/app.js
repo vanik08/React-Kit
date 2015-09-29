@@ -3,10 +3,12 @@ import {RouteHandler, Link} from 'react-router';
 import {Nav, Navbar, NavItem, Row, Col} from 'react-bootstrap';
 import MyNavbar from './Components/MyNavbar';
 import 'font-awesome-webpack';
-import './styles/app'
+import './styles/app';
 
-var SideNav = require("react-sidenav");
-var nav = [
+
+import SideNav from "react-sidenav";
+
+let nav = [
         {key: 'landing', title: 'Dashboard', 'iconClassName': 'fa fa-dashboard'},
         {key: 'channels', title: 'Channels', 'iconClassName': 'fa fa-exchange'},
         {key: 'fleet', title: 'Fleet', 'iconClassName': 'fa fa-truck'},
@@ -19,7 +21,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       text: 'Welcome to the homepage, hope you\'re having a wonderful day!'
-    }
+    };
   }
   render() {
     return (
@@ -28,7 +30,7 @@ class App extends React.Component {
         <Row>
           <Col md={2}>
             <div className={'sidenavCol'}>
-              <SideNav className={'sidenav'} itemType="righticon" 
+              <SideNav className={'sidenav'} itemType="righticon"
                        itemHeight="32px" navigation={nav}>
               </SideNav>
             </div>
@@ -39,7 +41,7 @@ class App extends React.Component {
           </Col>
         </Row>
       </div>
-    )
+    );
   }
 }
 

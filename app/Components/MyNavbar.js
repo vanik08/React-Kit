@@ -5,9 +5,9 @@ class MyNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.handleExpand = this.handleExpand.bind(this);
-    this.state = {expand: false}
+    this.state = {expand: false};
   }
-  handleExpand(e) { 
+  handleExpand(e) {
     if(window.innerWidth < 768) {
       this.setState({expand: !this.state.expand});
     }
@@ -15,7 +15,7 @@ class MyNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar brand='React' fluid toggleNavKey={0} navExpanded={this.state.expand} 
+        <Navbar brand='React' fluid toggleNavKey={0} navExpanded={this.state.expand}
                 onClick={this.handleExpand}>
           <Nav eventKey={0}>
             <NavItem  eventKey={1} href='#/'>Home</NavItem>
@@ -24,7 +24,7 @@ class MyNavbar extends React.Component {
           </Nav>
         </Navbar>
       </div>
-    )
+    );
   }
 }
 
