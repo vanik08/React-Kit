@@ -1,8 +1,12 @@
-var alt = require('../alt');
-var LocationActions = require('../actions/exampleActions');
+import alt from '../alt';
+import Immutable from 'immutable';
+import LocationActions  from '../actions/exampleActions';
+
+let map1 = Immutable.Map({a:1, b:2});
 
 class LocationStore {
   constructor() {
+
     this.locations = [];
 
     this.bindListeners({

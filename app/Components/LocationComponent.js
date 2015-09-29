@@ -5,7 +5,6 @@ import LocationActions from '../actions/exampleActions';
 import '../styles/contact';
 
 let inputValue;
-
 class LocationComponent extends React.Component {
   constructor(props) {
     super(props);
