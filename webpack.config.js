@@ -7,6 +7,13 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/,
+      }
+    ],
     loaders: [
       { test: /\.js$/, 
         loader: 'babel-loader',
@@ -22,5 +29,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.json', '.scss'] 
+  },
+  eslint: {
+    configFile: './.eslintrc'
   }
 };
