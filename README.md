@@ -10,10 +10,11 @@ React-Bootstrap <br />
 react-router <br /> 
 WebPack <br /> 
 ES6 (Babel) <br /> 
+Superagent <br />
 Bootstrap 3 <br /> 
 Font Awesome <br />
 Sass <br /> 
-jQuery and Lodash <br />
+Lodash <br />
 ESLint <br />
 Jest (unit testing)
 
