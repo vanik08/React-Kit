@@ -23,8 +23,8 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.scss$/,
-        loader: 'style!css!sass'
+        test: /.scss$/,
+        loader: 'style!css!sass!'
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
