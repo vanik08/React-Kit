@@ -6,6 +6,7 @@ let socket = io('http://localhost:3000');
 let value = '';
 
 class MessageBox extends React.Component {
+  
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
