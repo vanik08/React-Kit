@@ -1,4 +1,5 @@
 import React from 'react';
+import io from 'socket.io-client';
 import {RouteHandler, Link} from 'react-router';
 import {Nav, Navbar, NavItem, Row, Col} from 'react-bootstrap';
 import MyNavbar from './Components/MyNavbar';
@@ -6,6 +7,12 @@ import SideNavBar from './Components/SideNavBar';
 import 'font-awesome-webpack';
 import './styles/app';
 
+//Test
+let socket = io('http://localhost:3000');
+
+socket.on('connect', function() {
+  socket.emit('myMessage', 'This is a a test message from the client');
+});
 
 
 let nav = [
