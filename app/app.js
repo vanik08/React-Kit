@@ -3,15 +3,15 @@ import React from 'react';
 import {RouteHandler, Link} from 'react-router';
 import {Nav, Navbar, NavItem, Row, Col} from 'react-bootstrap';
 
-import MyNavbar from './Components/MyNavbar';
-import SideNavBar from './Components/SideNavBar';
+import MyNavbar from 'components/MyNavbar';
+import SideNavBar from 'components/SideNavBar';
 
-import SideNavStore from './stores/SideNavStore';
+import SideNavStore from 'stores/SideNavStore';
 
 import 'font-awesome-webpack';
-import './styles/app';
+import 'styles/app';
 
-import { sideNav } from  './styles/styles';
+import { sideNav } from  'styles/styles';
 
 
 class App extends React.Component {
