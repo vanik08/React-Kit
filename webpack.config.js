@@ -42,8 +42,9 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json', '.scss'],
-    modulesDirectories: ['Components', 'styles', 'node_modules']
+    root: path.join(__dirname, "app"),
+    modulesDirectories: ['node_modules'],
+    extensions: ['', '.js', '.jsx', '.json', '.scss']
   },
   eslint: {
     configFile: path.join(__dirname, './.eslintrc'),

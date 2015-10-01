@@ -1,6 +1,6 @@
-import alt from '../alt';
+import alt from 'alt';
 import Immutable from 'immutable';
-import SideNavActions  from '../actions/SideNavActions';
+import SideNavActions  from 'actions/SideNavActions';
 
 
 class SideNavStore {
