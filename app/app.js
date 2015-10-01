@@ -1,34 +1,62 @@
 import React from 'react';
+
 import {RouteHandler, Link} from 'react-router';
 import {Nav, Navbar, NavItem, Row, Col} from 'react-bootstrap';
+
 import MyNavbar from './Components/MyNavbar';
 import SideNavBar from './Components/SideNavBar';
+
+import SideNavStore from './stores/SideNavStore';
+
 import 'font-awesome-webpack';
 import './styles/app';
 
-let nav = [
-        {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
-        {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
-        {href: '/', title: 'Fleet', icon: 'fa-truck'},
-        {href: '/contact', title: 'Products', icon: 'fa-cubes'},
-        {href: '/', title: 'Inventory', icon: 'fa-database'}
-    ];
+import { sideNav } from  './styles/styles';
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    let {open, navStructure} = SideNavStore.getState();
+
     this.state = {
-      text: 'Welcome to the homepage, hope you\'re having a wonderful day!'
+      open,
+      navStructure
     };
+
+    this._sideNavStoreChange = this._sideNavStoreChange.bind(this);
   }
+
+  componentDidMount(){
+    SideNavStore.listen(this._sideNavStoreChange);
+  }
+
+  componentWilUnmount(){
+    SideNavStore.unlisten(this._sideNavStoreChange);
+
+  }
+
+  _sideNavStoreChange(){
+    this.setState(SideNavStore.getState());
+  }
+
   render() {
+    if(this.state.open){
+      sideNav.col.display = "block";
+    }else{
+      sideNav.col.display = "none";
+    }
+
     return (
       <div>
         <MyNavbar />
         <Row>
-          <Col md={2}>
+          <Col md={2} style={sideNav.col}>
             <aside className={'sidenavCol'}>
-              <SideNavBar itemType="righticon" itemHeight="32px" navLinks={nav}>
+              <SideNavBar itemType="righticon"
+                          itemHeight="32px"
+                          navLinks={this.state.navStructure}
+                          setStyles={sideNav}>
               </SideNavBar>
             </aside>
           </Col>

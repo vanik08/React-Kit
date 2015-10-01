@@ -11,6 +11,7 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = LocationStore.getState();
+
     this.handleClick = this.handleClick.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -25,7 +26,7 @@ class Contact extends React.Component {
     this.setState(state);
   }
   handleClick(e) {
-    this.state.locations.push({name: inputValue});
+    // this.state.locations.push({name: inputValue});
     LocationActions.updateLocations(this.state.locations);
   }
   handleInput(e) {
