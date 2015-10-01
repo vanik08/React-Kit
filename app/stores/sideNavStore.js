@@ -5,7 +5,7 @@ import SideNavActions  from '../actions/SideNavActions';
 
 class SideNavStore {
   constructor() {
-    
+
     this.state = {
       navStructure: [
             {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
@@ -18,11 +18,11 @@ class SideNavStore {
       };
 
     this.bindListeners({
-      updateOpen: SideNavActions.UPDATE_OPEN
+      toggleOpen: SideNavActions.TOGGLE_OPEN
     });
   }
-  updateOpen(open) {
-    this.state.open = open;
+  toggleOpen(open) {
+    this.state.open = !this.state.open;
   }
 }
 

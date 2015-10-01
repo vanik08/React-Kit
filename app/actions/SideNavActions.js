@@ -1,8 +1,8 @@
 var alt = require('../alt');
 
 class SideNavActions {
-  updateOpen(open) {
-    return open;
+  toggleOpen() {
+      this.dispatch();
   }
 }
 

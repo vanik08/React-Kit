@@ -19,6 +19,17 @@ let sideNavStyles = {
       width: '25px',
       marginLeft: '10px'
     }
+  },
+  mainNavStyles = {
+      nav: {
+        marginBottom:'0px'
+      },
+      bars: {
+        display: 'inline',
+        paddingLeft: '10px'
+
+      }
   };
 
 export { sideNavStyles as sideNav };
+export { mainNavStyles as mainNav };

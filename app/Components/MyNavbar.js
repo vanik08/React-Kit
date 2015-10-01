@@ -1,36 +1,53 @@
 import React from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
 
-let navBarStyle = {
-  marginBottom:'0px'
-};
+import SideNavActions from '../actions/SideNavActions';
+import SideNavStore from '../stores/SideNavStore';
+
+
+import {mainNav} from '../styles/styles';
+
 
 class MyNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.handleExpand = this.handleExpand.bind(this);
-    this.state = {expand: false};
+    this._sideNavToggle = this._sideNavToggle.bind(this);
+    this.state = {
+        expand: false
+    };
   }
+
   handleExpand(e) {
     if(window.innerWidth < 768) {
       this.setState({expand: !this.state.expand});
     }
   }
+
+  _sideNavToggle(){
+    SideNavActions.toggleOpen();
+  }
+
   render() {
     return (
-      <div>
-        <Navbar brand='React'
-                toggleNavKey={0}
-                navExpanded={this.state.expand}
-                onClick={this.handleExpand}
-                style={navBarStyle}>
-          <Nav eventKey={0}>
-            <NavItem eventKey={1} href='#/'>Home</NavItem>
-            <NavItem eventKey={2} href='#/about'>About</NavItem>
-            <NavItem eventKey={3} href='#/contact'>Contact</NavItem>
-          </Nav>
-        </Navbar>
-      </div>
+      <nav className="navbar navbar-default" style={mainNav.nav}>
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <a className="navbar-brand" href="#">
+              <span className="fa fa-bars" onClick={this._sideNavToggle}></span>
+              <img alt="React" style={mainNav.bars} />
+
+            </a>
+          </div>
+          <div className="collapse navbar-collapse" >
+            <ul className="nav navbar-nav">
+              <li className="active"><a href="#/">Home <span className="sr-only"></span></a></li>
+              <li><a href="#/about">About</a></li>
+              <li><a href="#/contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     );
   }
 }

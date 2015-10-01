@@ -7,7 +7,6 @@ import MyNavbar from './Components/MyNavbar';
 import SideNavBar from './Components/SideNavBar';
 
 import SideNavStore from './stores/SideNavStore';
-import SideNavActions from './actions/SideNavActions';
 
 import 'font-awesome-webpack';
 import './styles/app';
@@ -26,7 +25,6 @@ class App extends React.Component {
     };
 
     this._sideNavStoreChange = this._sideNavStoreChange.bind(this);
-    this._navToggle = this._navToggle.bind(this);
   }
 
   componentDidMount(){
@@ -42,10 +40,6 @@ class App extends React.Component {
     this.setState(SideNavStore.getState());
   }
 
-  _navToggle(){
-    SideNavActions.updateOpen(!this.state.open);
-  }
-
   render() {
     if(this.state.open){
       sideNav.col.display = "block";
@@ -56,7 +50,6 @@ class App extends React.Component {
     return (
       <div>
         <MyNavbar />
-        <span className="fa fa-bars" onClick={this._navToggle}></span>
         <Row>
           <Col md={2} style={sideNav.col}>
             <aside className={'sidenavCol'}>
