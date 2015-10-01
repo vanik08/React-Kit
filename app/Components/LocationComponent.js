@@ -23,8 +23,7 @@ class LocationComponent extends React.Component {
     this.setState(state);
   }
   handleClick(e) {
-    this.state.locations.push({name: inputValue});
-    LocationActions.updateLocations(this.state.locations);
+    LocationActions.updateLocations({name: inputValue});
   }
   handleInput(e) {
     inputValue = e.target.value;
