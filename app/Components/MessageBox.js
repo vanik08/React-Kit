@@ -2,7 +2,7 @@ import React from 'react';
 import io from 'socket.io-client';
 import {Button, Input} from 'react-bootstrap';
 
-let socket = io('http://localhost:3000');
+// let socket = io('http://localhost:3000');
 let value = '';
 
 class MessageBox extends React.Component {
