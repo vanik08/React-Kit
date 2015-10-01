@@ -42,7 +42,7 @@ module.exports = {
     ]
   },
   resolve: {
-    modulesDirectories: ['Components', 'styles', 'node_modules']
+    modulesDirectories: ['Components', 'styles', 'node_modules'],
     extensions: ['', '.js', '.jsx', '.json', '.scss']
   },
   eslint: {
