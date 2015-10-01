@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
-import SideNavLink from './SideNavLink';
+import SideNavLink from 'components/SideNavLink';
 
 
 class SideNavBar extends React.Component {
@@ -12,7 +12,7 @@ class SideNavBar extends React.Component {
   buildNavLinks(data){
     return data.map((link, i) => {
       link.setStyles = this.props.setStyles;
-      return <SideNavLink {...link} key={i}/>
+      return <SideNavLink {...link} key={i}/>;
     });
   }
 

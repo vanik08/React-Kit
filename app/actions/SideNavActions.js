@@ -1,4 +1,4 @@
-var alt = require('../alt');
+var alt = require('alt');
 
 class SideNavActions {
   toggleOpen() {
