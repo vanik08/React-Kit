@@ -6,6 +6,7 @@ let socket = io('http://localhost:3000');
 let value = '';
 
 class MessageBox extends React.Component {
+
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
@@ -26,7 +27,8 @@ class MessageBox extends React.Component {
   render() {
     return (
       <div>
-        <Input type="text" onChange={this.handleChange} placeholder="Message" value={this.state.val} />
+        <Input type="text" onChange={this.handleChange} placeholder="Message"
+         value={this.state.val} />
         <Button onClick={this.handleClick}>Send Message</Button>
       </div>
     );

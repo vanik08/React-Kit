@@ -11,6 +11,7 @@ React-Bootstrap <br />
 react-router <br /> 
 WebPack <br /> 
 ES6 (Babel) <br /> 
+Radium <br />
 Superagent <br />
 Bootstrap 3 <br /> 
 Font Awesome <br />
