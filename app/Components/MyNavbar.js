@@ -34,17 +34,10 @@ class MyNavbar extends React.Component {
         <div className="container-fluid">
           <div className="navbar-header">
             <a className="navbar-brand" href="#">
-              <span className="fa fa-bars" onClick={this._sideNavToggle}></span>
-              <img alt="React" style={mainNav.bars} />
+              <span className="fa fa-bars" onClick={this._sideNavToggle} style={mainNav.bars}></span>
+              <img alt="React" style={mainNav.logo}/>
 
             </a>
-          </div>
-          <div className="collapse navbar-collapse" >
-            <ul className="nav navbar-nav">
-              <li className="active"><a href="#/">Home <span className="sr-only"></span></a></li>
-              <li><a href="#/about">About</a></li>
-              <li><a href="#/contact">Contact</a></li>
-            </ul>
           </div>
         </div>
       </nav>
