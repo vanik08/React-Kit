@@ -13,7 +13,7 @@ import AboutCompany from './Components/AboutCompany';
 import Contact from './Components/Contact';
 import LocationComponent from './Components/LocationComponent';
 
-const Route        = Router.Route,
+const Route = Router.Route,
       DefaultRoute = Router.DefaultRoute;
 
 const routes = (

@@ -15,10 +15,15 @@ module.exports = {
         loader: "eslint-loader",
         exclude: /node_modules/
       }
+
     ],
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.json$/,
+        loader: "json-loader"
+      },
+      {
+        test: /\.jsx|.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
@@ -37,7 +42,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.json', '.scss']
+    extensions: ['', '.js', '.jsx', '.json', '.scss']
   },
   eslint: {
     configFile: path.join(__dirname, './.eslintrc'),
