@@ -11,9 +11,8 @@ import './styles/app';
 
 import { nav } from  './styles/styles';
 
-
-
 let navStructure = [
+
         {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
         {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
         {href: '/', title: 'Fleet', icon: 'fa-truck'},

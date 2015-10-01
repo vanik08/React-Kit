@@ -6,6 +6,7 @@ Starter kit for React.
 ReactJS <br /> 
 Flux using [AltJS](http://alt.js.org) <br /> 
 ImmutableJS <br />
+Socket.io <br />
 React-Bootstrap <br /> 
 react-router <br /> 
 WebPack <br /> 

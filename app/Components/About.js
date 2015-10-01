@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, RouteHandler} from 'react-router';
 import {Button} from 'react-bootstrap';
+import MessageBox from './MessageBox';
 import '../styles/about.scss';
 
 
@@ -41,6 +42,7 @@ class About extends React.Component {
           }
         })()}
         </p>
+        <MessageBox />
       </div>
     );
   }
