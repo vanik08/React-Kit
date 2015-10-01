@@ -1,6 +1,10 @@
 import React from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
 
+let navBarStyle = {
+  marginBottom:'0px'
+};
+
 class MyNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -15,12 +19,15 @@ class MyNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar brand='React' fluid toggleNavKey={0} navExpanded={this.state.expand}
-                onClick={this.handleExpand}>
+        <Navbar brand='React'
+                toggleNavKey={0}
+                navExpanded={this.state.expand}
+                onClick={this.handleExpand}
+                style={navBarStyle}>
           <Nav eventKey={0}>
-            <NavItem  eventKey={1} href='#/'>Home</NavItem>
-            <NavItem  eventKey={2} href='#/about'>About</NavItem>
-            <NavItem  eventKey={3} href='#/contact'>Contact</NavItem>
+            <NavItem eventKey={1} href='#/'>Home</NavItem>
+            <NavItem eventKey={2} href='#/about'>About</NavItem>
+            <NavItem eventKey={3} href='#/contact'>Contact</NavItem>
           </Nav>
         </Navbar>
       </div>

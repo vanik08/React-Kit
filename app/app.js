@@ -1,14 +1,19 @@
 import React from 'react';
+
 import {RouteHandler, Link} from 'react-router';
 import {Nav, Navbar, NavItem, Row, Col} from 'react-bootstrap';
+
 import MyNavbar from './Components/MyNavbar';
 import SideNavBar from './Components/SideNavBar';
+
 import 'font-awesome-webpack';
 import './styles/app';
 
+import { nav } from  './styles/styles';
 
 
-let nav = [
+
+let navStructure = [
         {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
         {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
         {href: '/', title: 'Fleet', icon: 'fa-truck'},
@@ -30,7 +35,10 @@ class App extends React.Component {
         <Row>
           <Col md={2}>
             <aside className={'sidenavCol'}>
-              <SideNavBar itemType="righticon" itemHeight="32px" navLinks={nav}>
+              <SideNavBar itemType="righticon"
+                          itemHeight="32px"
+                          navLinks={navStructure}
+                          setStyles={nav}>
               </SideNavBar>
             </aside>
           </Col>
