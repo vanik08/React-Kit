@@ -1,4 +1,4 @@
-var alt = require('alt');
+import alt from 'alt';
 
 class SideNavActions {
   toggleOpen() {
@@ -6,4 +6,4 @@ class SideNavActions {
   }
 }
 
-module.exports = alt.createActions(SideNavActions);
+export default alt.createActions(SideNavActions);
