@@ -42,12 +42,8 @@ module.exports = {
     ]
   },
   resolve: {
-<<<<<<< HEAD
-    extensions: ['', '.js', '.json', '.scss'],
+    extensions: ['', '.js', '.jsx', '.json', '.scss'],
     modulesDirectories: ['Components', 'styles', 'node_modules']
-=======
-    extensions: ['', '.js', '.jsx', '.json', '.scss']
->>>>>>> 9a4c1932b081bf0c30e7f1c2a8193a17950133ee
   },
   eslint: {
     configFile: path.join(__dirname, './.eslintrc'),
