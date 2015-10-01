@@ -1,7 +1,10 @@
 import color from 'color';
 
 let navBarColor = "#fafafa";
-let navStyles = {
+let sideNavStyles = {
+    col: {
+      paddingRight: '0px'
+    },
     navLink: {
       backgroundColor: navBarColor,
       ':hover': {
@@ -18,4 +21,4 @@ let navStyles = {
     }
   };
 
-export { navStyles as nav };
+export { sideNavStyles as sideNav };
