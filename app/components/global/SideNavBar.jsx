@@ -1,18 +1,22 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
-import SideNavLink from 'components/SideNavLink';
+import SideNavLink from 'components/global/SideNavLink';
 
+const propTypes = {
+  navLinks: PropTypes.array.isRequired,
+  setStyles: PropTypes.object.isRequired,
+};
 
 class SideNavBar extends React.Component {
   constructor() {
     super();
   }
 
-  buildNavLinks(data){
-    return data.map((link, i) => {
+  buildNavLinks(data) {
+    return data.map((link, idx) => {
       link.setStyles = this.props.setStyles;
-      return <SideNavLink {...link} key={i}/>;
+      return <SideNavLink {...link} key={idx}/>;
     });
   }
 
@@ -29,5 +33,6 @@ class SideNavBar extends React.Component {
     );
   }
 }
+SideNavBar.propTypes = propTypes;
 
 export default SideNavBar;
