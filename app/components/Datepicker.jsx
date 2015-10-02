@@ -4,6 +4,8 @@ import DateRangePicker from 'react-daterange-picker';
 import dateRangePickerStyles from 'styles/lib/DateRangePickerStyles';
 import { Button, Input, Row, Col } from 'react-bootstrap';
 
+import WeekdaySelector from 'components/WeekdaySelector';
+
 const stateDefinitions = {
   available: {
     color: null,
@@ -20,37 +22,25 @@ const stateDefinitions = {
   },
 };
 
-const dateRanges = [
-  // {
-  //   state: 'enquire',
-  //   range: moment.range(
-  //     moment().add(2, 'weeks').subtract(5, 'days'),
-  //     moment().add(2, 'weeks').add(6, 'days')
-  //   ),
-  // },
-  // {
-  //   state: 'unavailable',
-  //   range: moment.range(
-  //     moment().add(3, 'weeks'),
-  //     moment().add(3, 'weeks').add(5, 'days')
-  //   ),
-  // },
-];
+const dateRanges = [];
 
 
 class Datepicker extends React.Component {
   constructor() {
     super();
     this.onSelectDates = this.onSelectDates.bind(this);
+    this.onClick = this.onClick.bind(this);
     this.state = {
       value: '',
-      states: ''
+      states: '',
+      weekdays: []
     };
   }
 
   getFormattedDate(date) {
     if (date == undefined)
       return '';
+
     let tempDate =  new Date(date);
     let month = tempDate.getMonth()+1;
     let day = tempDate.getDate();
@@ -59,28 +49,46 @@ class Datepicker extends React.Component {
   }
 
   onSelectDates(range, states) {
+    dateRanges.push({state: 'enquire', range: range});
+    dateRanges.sort();
     this.setState({
       value: range,
       states: states
     });
   }
 
+ onClick() {
+   console.log(this.state.weekdays);
+ }
+
   render() {
     return (
       <Row>
-        <Col md={4}>
+        <Col md={8}>
           <label>From</label>
-          <Input type="text" placeholder="From"
-                 value={this.getFormattedDate(this.state.value.start)} />
+          <Input
+            type="text"
+            placeholder="From"
+            value={this.getFormattedDate(this.state.value.start)} />
           <label>To</label>
-          <Input type="text" placeholder="To"
-                 value={this.getFormattedDate(this.state.value.end)} />
-          <DateRangePicker selectionType="range"
-                           stateDefinitions={stateDefinitions}
-                           defaultState="available"
-                           dateStates={dateRanges}
-                           value={this.state.value}
-                           onSelect={this.onSelectDates} />
+          <Input
+            type="text"
+            placeholder="To"
+            value={this.getFormattedDate(this.state.value.end)} />
+
+          <WeekdaySelector selectedWeekdays={this.state.weekdays} />
+
+          <Button bsStyle={'success'} onClick={this.onClick}>
+            Set Dates
+          </Button>
+          <DateRangePicker
+            selectionType="range"
+            numberOfCalendars={1}
+            stateDefinitions={stateDefinitions}
+            defaultState="available"
+            dateStates={dateRanges}
+            value={this.state.value}
+            onSelect={this.onSelectDates} />
         </Col>
       </Row>
     );
