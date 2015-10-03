@@ -2,7 +2,7 @@ import alt from 'alt';
 
 class SideNavActions {
   toggleOpen() {
-      this.dispatch();
+    this.dispatch();
   }
 }
 

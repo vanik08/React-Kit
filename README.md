@@ -2,20 +2,20 @@
 Starter kit for React.
 
 ### React Bootstrap all inclusive toolset.
-##### Includes <br /> 
-ReactJS <br /> 
-Flux using [AltJS](http://alt.js.org) <br /> 
+##### Includes <br />
+ReactJS <br />
+Flux using [AltJS](http://alt.js.org) <br />
 ImmutableJS <br />
 Socket.io <br />
-React-Bootstrap <br /> 
-react-router <br /> 
-WebPack <br /> 
-ES6 (Babel) <br /> 
+React-Bootstrap <br />
+react-router <br />
+WebPack <br />
+ES6 (Babel) <br />
 Radium <br />
 Superagent <br />
-Bootstrap 3 <br /> 
+Bootstrap 3 <br />
 Font Awesome <br />
-Sass <br /> 
+Sass <br />
 Lodash <br />
 ESLint <br />
 Jest (unit testing)
@@ -28,7 +28,4 @@ Jest (unit testing)
 `npm start` to start Dev-Server with Hot reloading. <br />
 `npm run build` To build for production <br />
 
-
-
-
-
+Coding Standards: Follow https://github.com/airbnb/javascript/tree/master/react

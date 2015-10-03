@@ -1,6 +1,6 @@
 var path = require('path');
 
-module.exports = {
+var webpackConfig  = {
   entry: {
     app: ["webpack/hot/dev-server", "./app/main.js"]
   },
@@ -51,3 +51,5 @@ module.exports = {
     failOnError: true
   }
 };
+module.exports = webpackConfig;
+module.exports.test = webpackConfig;
