@@ -12,7 +12,7 @@ let TestUtils = React.addons.TestUtils;
 
 
 describe('Side navbar ', () => {
-  it('checks the number of "a" elements inside the sidenavbar component', function() {
+  it('checks the number of "a" elements inside the sidenavbar component', () => {
     let navLinks = [
           {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
           {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
@@ -34,7 +34,7 @@ describe('Side navbar ', () => {
     expect(links.length).toBe(navLinks.length);
   });
 
-  it('checks content of a rendered sideNavLink', function() {
+  it('checks content of a rendered sideNavLink', () => {
     let href ='/about';
     let title = 'Dashboard';
     let icon = 'fa-dashboard';
