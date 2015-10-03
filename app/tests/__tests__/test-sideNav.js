@@ -8,33 +8,33 @@ var ReactRouterContext = require('../ReactRouterContext.js');
 var SideNavBar = require('components/global/SideNavBar');
 var SideNavLink = require('components/global/SideNavLink');
 
-var TestUtils = React.addons.TestUtils;
+let TestUtils = React.addons.TestUtils;
 
 
-describe('Side navbar ', function() {
-  it('checks the number of "a" elements inside the sidenavbar component', function() {
-    var navLinks = [
+describe('Side navbar ', () => {
+  it('checks the number of "a" elements inside the sidenavbar component', () => {
+    let navLinks = [
           {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
           {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
           {href: '/', title: 'Fleet', icon: 'fa-truck'},
           {href: '/contact', title: 'Products', icon: 'fa-cubes'},
           {href: '/', title: 'Inventory', icon: 'fa-database'},
     ];
-    var WrappedSideNavBar = ReactRouterContext(SideNavBar,{
+    let WrappedSideNavBar = ReactRouterContext(SideNavBar,{
       setStyles: {},
       navLinks: navLinks
     });
-    var renderedSideNav = TestUtils.renderIntoDocument(
+    let renderedSideNav = TestUtils.renderIntoDocument(
       <WrappedSideNavBar />
     );
 
     expect(TestUtils.isCompositeComponent(renderedSideNav)).toBeTruthy();
-    var links = TestUtils.scryRenderedDOMComponentsWithClass(renderedSideNav, 'side-nav-link');
+    let links = TestUtils.scryRenderedDOMComponentsWithClass(renderedSideNav, 'side-nav-link');
 
     expect(links.length).toBe(navLinks.length);
   });
 
-  it('checks content of a rendered sideNavLink', function() {
+  it('checks content of a rendered sideNavLink', () => {
     let href ='/about';
     let title = 'Dashboard';
     let icon = 'fa-dashboard';
