@@ -24,9 +24,9 @@ class SideNavLink extends React.Component {
 
     return (
       <RadiumLink to={href} style={links}>
-        <div style={navLink}>
+        <div style={navLink} className="side-nav-link">
           <i style={linkIcon} className={`fa ${icon}`}></i>
-          <span> {title} </span>
+          <span>{title}</span>
         </div>
       </RadiumLink>
       );

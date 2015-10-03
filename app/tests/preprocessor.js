@@ -1,14 +1,15 @@
-import _ from 'lodash';
-import babelJest from 'babel-jest';
-import path from 'path';
-import webpackAlias from 'jest-webpack-alias';
+var _ = require('lodash');
+var babelJest = require('babel-jest');
+var path = require('path');
+var webpackAlias = require('jest-webpack-alias');
+
 // Change these to point to your source and test directories
-let dirs = ['../', './__tests__'].map(function(dir) {
+var dirs = ['../', './__tests__'].map(function(dir) {
   return path.resolve(__dirname, dir);
 });
 
 function matches(filename) {
-  return _.find(dirs, (dir) => {
+  return _.find(dirs, function(dir) {
     return filename.indexOf(dir) === 0;
   });
 }

@@ -1,21 +1,66 @@
 
-jest.dontMock('../../components/global/SideNavLink.jsx');
-jest.dontMock('../../components/global/SideNavBar.jsx');
+jest.autoMockOff();
+// jest.dontMock('../../components/global/SideNavLink.jsx');
+// jest.dontMock('../../components/global/SideNavBar.jsx');
 
-import React from 'react/addons';
-// import ReactRouterContext from '../ReactRouterContext.js';
-import SideNavBar from 'components/global/SideNavbar';
+var React  = require('react/addons');
+var ReactRouterContext = require('../ReactRouterContext.js');
+var SideNavBar = require('components/global/SideNavBar');
+var SideNavLink = require('components/global/SideNavLink');
 
-const TestUtils = React.addons.TestUtils;
+var TestUtils = React.addons.TestUtils;
 
-describe('Side navbar ', () => {
-  it('checks the number of "a" elements inside the sidenavbar component', () => {
-    const navLink = {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'};
-    const renderedSideNav = TestUtils.renderIntoDocument(
-      <SideNavBar setStyles={{color: 'red'}} navLinks={[navLink]}/>
+
+describe('Side navbar ', function() {
+  it('checks the number of "a" elements inside the sidenavbar component', function() {
+    var navLinks = [
+          {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
+          {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
+          {href: '/', title: 'Fleet', icon: 'fa-truck'},
+          {href: '/contact', title: 'Products', icon: 'fa-cubes'},
+          {href: '/', title: 'Inventory', icon: 'fa-database'},
+    ];
+    var WrappedSideNavBar = ReactRouterContext(SideNavBar,{
+      setStyles: {},
+      navLinks: navLinks
+    });
+    var renderedSideNav = TestUtils.renderIntoDocument(
+      <WrappedSideNavBar />
     );
 
     expect(TestUtils.isCompositeComponent(renderedSideNav)).toBeTruthy();
-    console.log(TestUtils.scryRenderedComponentsWithType(renderedSideNav, 'SideNavLink'));
+    var links = TestUtils.scryRenderedDOMComponentsWithClass(renderedSideNav, 'side-nav-link');
+
+    expect(links.length).toBe(navLinks.length);
+  });
+
+  it('checks content of a rendered sideNavLink', function() {
+    let href ='/about';
+    let title = 'Dashboard';
+    let icon = 'fa-dashboard';
+
+    let WrappedLink = ReactRouterContext(SideNavLink, {
+      setStyles: {},
+      href,
+      title,
+      icon,
+    });
+
+    let renderedLink = TestUtils.renderIntoDocument(
+      <WrappedLink />
+    );
+
+    expect(TestUtils.isCompositeComponent(renderedLink)).toBeTruthy();
+
+    let link = TestUtils.findRenderedDOMComponentWithTag(renderedLink, 'a');
+    let div = TestUtils.findRenderedDOMComponentWithTag(renderedLink, 'div');
+    let renderedIcon = TestUtils.findRenderedDOMComponentWithTag(renderedLink, 'i');
+    let span = TestUtils.findRenderedDOMComponentWithTag(renderedLink, 'span');
+
+    expect(link.props.to).toEqual(href);
+    expect(React.findDOMNode(div).className).toEqual('side-nav-link');
+    expect(React.findDOMNode(renderedIcon).className).toEqual(`fa ${icon}`);
+    expect(React.findDOMNode(span).textContent).toEqual(title);
+    expect()
   });
 });
