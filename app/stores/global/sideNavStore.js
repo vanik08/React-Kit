@@ -6,11 +6,40 @@ class SideNavStore {
   constructor() {
     this.state = {
       navStructure: [
-            {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
-            {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
-            {href: '/', title: 'Fleet', icon: 'fa-truck'},
-            {href: '/contact', title: 'Products', icon: 'fa-cubes'},
-            {href: '/', title: 'Inventory', icon: 'fa-database'},
+        {
+          href: '/about',
+          title: 'Dashboard',
+          icon: 'fa-dashboard',
+        },
+        {
+          title: 'Channels',
+          icon: 'fa-exchange',
+          sub: [
+            {
+              href: '/contact',
+              title: 'Contact Sub-Page',
+            },
+            {
+              href: '/somethign',
+              title: 'SOmething cool',
+            },
+          ],
+        },
+        {
+          href: '/',
+          title: 'Fleet',
+          icon: 'fa-truck',
+        },
+        {
+          href: '/contact',
+          title: 'Products',
+          icon: 'fa-cubes',
+        },
+        {
+          href: '/',
+          title: 'Inventory',
+          icon: 'fa-database',
+        },
       ],
       open: true,
     };

@@ -9,15 +9,24 @@ const sideNavStyles = {
     backgroundColor: navBarColor,
     ':hover': {
       backgroundColor: color(navBarColor).darken(0.2).hexString(),
+      cursor: 'pointer',
     },
   },
   links: {
     color: '#333',
+    margin: '0',
   },
   linkIcon: {
     padding: '10px',
     width: '25px',
     marginLeft: '10px',
+    marginRight: '10px',
+  },
+  subNav: {
+    marginLeft: '50px',
+  },
+  subNavLink: {
+    color: '#333',
   },
 };
 const mainNavStyles = {

@@ -14,11 +14,37 @@ let TestUtils = React.addons.TestUtils;
 describe('Side navbar ', () => {
   it('checks the number of "a" elements inside the sidenavbar component', () => {
     let navLinks = [
-          {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
-          {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
-          {href: '/', title: 'Fleet', icon: 'fa-truck'},
-          {href: '/contact', title: 'Products', icon: 'fa-cubes'},
-          {href: '/', title: 'Inventory', icon: 'fa-database'},
+          {
+            href: '/about',
+            title: 'Dashboard',
+            icon: 'fa-dashboard'
+          },
+          {
+            href: '/contact',
+            title: 'Channels',
+            icon: 'fa-exchange',
+            sub:[{
+              {
+                href: '/contact',
+                title: 'Contact Sub-Page'
+              }
+            }]
+          },
+          {
+            href: '/',
+            title: 'Fleet',
+            icon: 'fa-truck'
+          },
+          {
+            href: '/contact',
+            title: 'Products',
+            icon: 'fa-cubes'
+          },
+          {
+            href: '/',
+            title: 'Inventory',
+            icon: 'fa-database'
+          },
     ];
     let WrappedSideNavBar = ReactRouterContext(SideNavBar,{
       setStyles: {},
