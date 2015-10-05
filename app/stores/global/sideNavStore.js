@@ -1,27 +1,25 @@
 import alt from 'alt';
-import Immutable from 'immutable';
-import SideNavActions  from 'actions/SideNavActions';
+import SideNavActions from 'actions/global/SideNavActions';
 
 
 class SideNavStore {
   constructor() {
-
     this.state = {
       navStructure: [
             {href: '/about', title: 'Dashboard', icon: 'fa-dashboard'},
             {href: '/contact', title: 'Channels', icon: 'fa-exchange'},
             {href: '/', title: 'Fleet', icon: 'fa-truck'},
             {href: '/contact', title: 'Products', icon: 'fa-cubes'},
-            {href: '/', title: 'Inventory', icon: 'fa-database'}
+            {href: '/', title: 'Inventory', icon: 'fa-database'},
       ],
-        open: true
-      };
+      open: true,
+    };
 
     this.bindListeners({
-      toggleOpen: SideNavActions.TOGGLE_OPEN
+      toggleOpen: SideNavActions.TOGGLE_OPEN,
     });
   }
-  toggleOpen(open) {
+  toggleOpen() {
     this.state.open = !this.state.open;
   }
 }

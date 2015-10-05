@@ -1,17 +1,17 @@
 import React from 'react';
 
-import {RouteHandler, Link} from 'react-router';
-import {Nav, Navbar, NavItem, Row, Col} from 'react-bootstrap';
+import {RouteHandler} from 'react-router';
+import {Row, Col} from 'react-bootstrap';
 
-import MyNavbar from 'components/MyNavbar';
-import SideNavBar from 'components/SideNavBar';
+import MyNavbar from 'components/global/MyNavbar';
+import SideNavBar from 'components/global/SideNavBar';
 
-import SideNavStore from 'stores/SideNavStore';
+import SideNavStore from 'stores/global/SideNavStore';
 
 import 'font-awesome-webpack';
 import 'styles/app';
 
-import { sideNav } from  'styles/styles';
+import {sideNav} from 'styles/styles';
 
 //test
 import Datepicker from 'components/Datepicker';
@@ -21,34 +21,29 @@ import Datepicker from 'components/Datepicker';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    let {open, navStructure} = SideNavStore.getState();
 
-    this.state = {
-      open,
-      navStructure
-    };
+    this.state = SideNavStore.getState();
 
-    this._sideNavStoreChange = this._sideNavStoreChange.bind(this);
+    this.onSideNavStoreChange = this.onSideNavStoreChange.bind(this);
   }
 
-  componentDidMount(){
-    SideNavStore.listen(this._sideNavStoreChange);
+  componentDidMount() {
+    SideNavStore.listen(this.onSideNavStoreChange);
   }
 
-  componentWilUnmount(){
-    SideNavStore.unlisten(this._sideNavStoreChange);
-
-  }
-
-  _sideNavStoreChange(){
+  onSideNavStoreChange() {
     this.setState(SideNavStore.getState());
   }
 
+  componentWilUnmount() {
+    SideNavStore.unlisten(this.onSideNavStoreChange);
+  }
+
   render() {
-    if(this.state.open){
-      sideNav.col.display = "block";
-    }else{
-      sideNav.col.display = "none";
+    if (this.state.open) {
+      sideNav.col.display = 'block';
+    } else {
+      sideNav.col.display = 'none';
     }
 
     return (
@@ -57,11 +52,8 @@ class App extends React.Component {
         <Row>
           <Col md={2} style={sideNav.col}>
             <aside className={'sidenavCol'}>
-              <SideNavBar itemType="righticon"
-                          itemHeight="32px"
-                          navLinks={this.state.navStructure}
-                          setStyles={sideNav}>
-              </SideNavBar>
+              <SideNavBar navLinks={this.state.navStructure}
+                          setStyles={sideNav} />
             </aside>
           </Col>
           <Col md={10}>
