@@ -13,11 +13,6 @@ import 'styles/app';
 
 import {sideNav} from 'styles/styles';
 
-//test
-import Datepicker from 'components/Datepicker';
-
-
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -59,7 +54,6 @@ class App extends React.Component {
           <Col md={10}>
             <h5>{this.state.text}</h5>
             <RouteHandler />
-            <Datepicker />
           </Col>
         </Row>
       </div>
